@@ -276,4 +276,59 @@ button:disabled {
 }
 
 .received {
-    backgroun
+    background-color: #e5e5ea;
+    color: #000;
+    float: left;
+}
+
+.message-receiver {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* device rotated mode off*/
+@media (orientation: landscape) {
+    html, body {
+      overflow: hidden;
+    }
+  }
+/* .centered-div {
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Hide the horizontal scrollbar */
+   /* background-color: #f2f2f2
+  }
+  
+  @media (min-width: 800px) {
+    .centered-div {
+      width: 800px;
+    }
+  } */
+
+ /* .centered-div {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .centered-div {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .centered-div {
+    width: 95%;
+    padding: 5px;
+  }
+} */
