@@ -2,13 +2,15 @@ const socket = io();
 
 //Elements
 const $messageForm = document.querySelector('#message-form');
-const $messageFormInput = document.querySelector("input");
+const $messageFormInput = document.querySelector("#input");
 const $messageFormButton = document.querySelector('button');
 const $sendLocationButton = document.querySelector('#send-location');
 const $messages = document.querySelector('#messages')
 
 //Templates
+const messageTemplateSender = document.querySelector('#message-templates-sender').innerHTML;
 const messageTemplate = document.querySelector('#message-templates').innerHTML;
+const locationMessageTemplateSender = document.querySelector('#location-message-templates-sender').innerHTML;
 const locationMessageTemplate = document.querySelector('#location-message-templates').innerHTML;
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML;
 
@@ -32,11 +34,20 @@ const autoscroll = () => {
 
     // How far have I scrolled?
     const scrollOffset = $messages.scrollTop + visibleHeight
-
+    
     if (containerHeight - newMessageHeight <= scrollOffset) {
         $messages.scrollTop = $messages.scrollHeight
     }
 }
+socket.on("sendme", (message) => {
+    const html = Mustache.render(messageTemplateSender,{
+        username : message.username,
+        message : message.text,
+        createdAt : moment(message.createdAt).format('h:mm a')
+    });
+    $messages.insertAdjacentHTML('beforeend', html);
+    autoscroll()
+})
 
 socket.on("message" , (message) => {
     const html = Mustache.render(messageTemplate,{
@@ -49,6 +60,16 @@ socket.on("message" , (message) => {
     autoscroll()
 });
 
+socket.on("sendMeLocation", (message) => {
+    const html = Mustache.render(locationMessageTemplateSender,{
+        username : message.username, 
+        url : message.url,
+        createdAt : moment(message.createdAt).format('h:mm a')
+    });
+    $messages.insertAdjacentHTML("beforeend", html)
+    autoscroll()
+})
+
 socket.on("locationMessage", (message) => {
     const html = Mustache.render(locationMessageTemplate,{
         username : message.username, 
@@ -58,6 +79,7 @@ socket.on("locationMessage", (message) => {
     $messages.insertAdjacentHTML("beforeend", html)
     autoscroll()
 })
+
 
 socket.on("roomData", ({room, users}) => {
     const html = Mustache.render(sidebarTemplate, {
@@ -73,7 +95,7 @@ $messageForm.addEventListener("submit", (e) => {
 
     const message = e.target.elements.message.value;
     socket.emit("sendMessage", message, (error) => {
-
+        
         $messageFormButton.removeAttribute('disabled');
         $messageFormInput.value = '';
         $messageFormInput.focus();
@@ -82,7 +104,6 @@ $messageForm.addEventListener("submit", (e) => {
             return alert(error);
         }
 
-        console.log("message delivered!");
     });
 })
 
@@ -102,14 +123,8 @@ $sendLocationButton.addEventListener("click", () => {
 
         socket.emit("sendLocation", location, () => {
             $sendLocationButton.removeAttribute('disabled');
-            console.log('location shared!');
         });
     })
 })
 
-socket.emit("join", {username, room}, (error) => {
-    if(error){
-        alert(error);
-        location.href = '/';
-    }
-});
+socket.emi
