@@ -24,12 +24,12 @@ h1 {
     margin-bottom: 16px;
 }
 
-label {
+/* label {
     display: block;
     font-size: 14px;
     margin-bottom: 8px;
     color: #777;
-}
+} */
 
 input {
     border: 1px solid #eeeeee;
@@ -56,8 +56,68 @@ button:disabled {
     background: #7c5cbf94;
 }
 
-/* Join Page Styles */
+/* new join page style */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.join-body {
+    font-family: Arial, sans-serif;
+    background-color: #212529
+}
+
+.container {
+    max-width: 340px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.joinh2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Join Page Styles */
+/*
 .centered-form {
     background: #333744;
     width: 100vw;
@@ -82,7 +142,7 @@ button:disabled {
     margin-bottom: 16px;
     width: 100%;
 }
-
+*/
 /* Chat Page Layout */
 
 .chat {
@@ -91,10 +151,10 @@ button:disabled {
 
 .chat__sidebar {
     height: 100vh;
-    color: white;
-    background: #333744;
-    width: 225px;
-    overflow-y: scroll
+    /* color: white;
+    background: #333744; */
+    /* width: 225px; */
+    overflow-y: scroll;
 }
 
 /* Chat styles */
@@ -108,14 +168,14 @@ button:disabled {
 
 .chat__messages {
     flex-grow: 1;
-    padding: 24px 24px 0 24px;
+    padding: 10vh 24px 0 24px;
     overflow-y: scroll;
 }
 
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;
 }
 
 .message__name {
@@ -149,7 +209,7 @@ button:disabled {
 }
 
 .compose input {
-    border: 1px solid #eeeeee;
+    border: 1px solid #ccc7c7;
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
@@ -166,7 +226,7 @@ button:disabled {
     font-weight: 400;
     font-size: 22px;
     background: #2c2f3a;
-    padding: 24px;   
+    padding: 24px;
 }
 
 .list-title {
@@ -181,3 +241,94 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+/* message sending and reciever design */
+.chat-bubble-sender {
+    max-width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    clear: both;
+    overflow-wrap: break-word;
+}
+
+.sending {
+    background-color: #e5e5ea;
+    color: #000;
+    float: right;
+    /* Updated: float right instead of left */
+}
+
+.message-sender {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-bubble-reciever {
+    max-width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    clear: both;
+    overflow-wrap: break-word;
+}
+
+.received {
+    background-color: #e5e5ea;
+    color: #000;
+    float: left;
+}
+
+.message-receiver {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* device rotated mode off*/
+@media (orientation: landscape) {
+    html, body {
+      overflow: hidden;
+    }
+  }
+/* .centered-div {
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Hide the horizontal scrollbar */
+   /* background-color: #f2f2f2
+  }
+  
+  @media (min-width: 800px) {
+    .centered-div {
+      width: 800px;
+    }
+  } */
+
+ /* .centered-div {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  .centered-div {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .centered-div {
+    width: 95%;
+    padding: 5px;
+  }
+} */
