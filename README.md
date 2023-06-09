@@ -8,7 +8,7 @@ Welcome to the Chat Web App! This project showcases my skills in web development
 </div>
 
 <p align="center">
-  <a href="alert('sorry..live demo not available currently')" target="_blank"><strong>🔗 Live Demo</strong></a>
+  <a href="https://github.com/harshpatel-r/chat-app#readme" target="_blank"><strong>🔗 Live Demo</strong></a>
 </p>
 
 ---
@@ -110,11 +110,11 @@ Thank you for visiting the Chat Web App! We hope you enjoy using it for real-tim
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/your-twitter-handle" target="_blank"><img src="https://img.shields.io/badge/-Twitter-%231DA1F2" alt="Twitter" style="height: 20px; width: auto; margin-right: 10px" /></a>
-  <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230A66C2" alt="LinkedIn" style="height: 20px; width: auto; margin-right: 10px" /></a>
-  <a href="https://github.com/your-github-profile" target="_blank"><img src="https://img.shields.io/badge/-GitHub-%23181717" alt="GitHub" style="height: 20px; width: auto; margin-right: 10px" /></a>
-  <a href="mailto:your-email-address" target="_blank"><img src="https://img.shields.io/badge/-Gmail-%23D14836" alt="Gmail" style="height: 20px; width: auto; margin-right: 10px" /></a>
-  <a href="https://www.your-website.com" target="_blank"><img src="https://img.shields.io/badge/-Personal%20Website-%23555555" alt="Personal Website" style="height: 20px; width: auto; margin-right: 10px" /></a>
+  <a href="https://twitter.com/harshpatel__" target="_blank"><img src="https://img.shields.io/badge/-Twitter-%231DA1F2" alt="Twitter" style="height: 20px; width: auto; margin-right: 10px" /></a>
+  <a href="https://www.linkedin.com/in/harsh-patel-74b2b7247/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230A66C2" alt="LinkedIn" style="height: 20px; width: auto; margin-right: 10px" /></a>
+  <a href="https://github.com/harshpatel-r/" target="_blank"><img src="https://img.shields.io/badge/-GitHub-%23181717" alt="GitHub" style="height: 20px; width: auto; margin-right: 10px" /></a>
+  <a href="mailto:harshpatel23900@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-%23D14836" alt="Gmail" style="height: 20px; width: auto; margin-right: 10px" /></a>
+  <a href="https://harshpatel.pages.dev/" target="_blank"><img src="https://img.shields.io/badge/-Personal%20Website-%23555555" alt="Personal Website" style="height: 20px; width: auto; margin-right: 10px" /></a>
 </p>
 
 <p align="center">
